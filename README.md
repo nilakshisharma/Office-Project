@@ -1,6 +1,15 @@
-# Sample AEM project template
+#Introduction
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+This project is a custom-built **back-office tool** developed using **Adobe Experience Manager (AEM)** as part of an enterprise CMS solution. The tool is designed to streamline the internal process of **registering** and **retrieving warranty data** through a secure, modular, and scalable architecture.
+
+It consists of two main components:
+
+- **Register Warranty**: Allows authors to submit structured warranty information via Touch UI dialogs with robust validation.
+- **Retrieve Warranty**: Enables real-time search and retrieval of stored warranty records using AJAX and dynamic JSON rendering.
+
+The backend is powered by **Sling Servlets**, **OSGi services**, and **JCR-based persistence**, while the frontend leverages **HTL (Sightly)**, **Webpack**, and **GSAP** for interactivity and modular development.
+
+This project was built during an internship at **Axeno Consulting** and follows enterprise best practices for AEM development, including environment-based configuration, validation, dispatcher caching, and accessibility support.
 
 ## Modules
 
