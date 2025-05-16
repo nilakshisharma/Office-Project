@@ -1,4 +1,4 @@
-#Introduction
+## Introduction
 
 This project is a custom-built **back-office tool** developed using **Adobe Experience Manager (AEM)** as part of an enterprise CMS solution. The tool is designed to streamline the internal process of **registering** and **retrieving warranty data** through a secure, modular, and scalable architecture.
 
