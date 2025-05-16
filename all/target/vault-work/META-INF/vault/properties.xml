@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Back Office Tools - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2025-05-11T14:08:31.610Z</entry>
+<entry key="groupId">com.assignment</entry>
+<entry key="name">backofficetools.all</entry>
+<entry key="description">All content package for Back Office Tools</entry>
+<entry key="artifactId">backofficetools.all</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.assignment</entry>
+</properties>

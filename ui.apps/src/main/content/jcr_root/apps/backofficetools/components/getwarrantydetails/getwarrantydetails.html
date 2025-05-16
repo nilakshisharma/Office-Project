@@ -1,0 +1,54 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='backofficetools.site'}">
+  </sly>
+</head>
+<div class="boxofficegetwarranty">
+  <div class="searchbox">
+    <select class="searchbox__searchby" name="Searchby">
+      <option value="modelId">Model Id</option>
+      <option value="productId">Product Id</option>
+      <option value="startDate">Start Date</option>
+      <option value="endDate">End Date</option>
+      <option value="dealerId">Dealer Id</option>
+    </select>
+    <input class="searchbox__input" type="text" placeholder="Enter Model Id" />
+    <div class="searchbox__icon">
+      <svg class="searchbox__icon--svg" fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 488.4 488.4" xml:space="preserve">
+          <g>
+              <g>
+                  <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6
+s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2
+S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7
+S381.9,104.65,381.9,203.25z" />
+              </g>
+          </g>
+      </svg>
+  </div>
+  </div>
+  <div class="searchresult">
+    <table class="searchresult__table" border>
+        <thead>
+            <tr>
+                <th>Seriel No.</th>
+                <th>Model Id</th>
+                <th>Product Id</th>
+                <th>Start Date</th>
+                <th>End Date</th>  
+                <th>Dealer Id</th>  
+            </tr>
+        </thead>
+        <tbody class="searchresult__table--tbody">
+        </tbody>
+    </table>
+  </div>
+  <div class="fallbackresult">
+    <h4 class="fallbackresult__title">Search Warranty Details</h4>
+  </div>
+</div>
+<sly data-sly-call="${clientlib.js @ categories='backofficetools.site'}"></sly>
+
+

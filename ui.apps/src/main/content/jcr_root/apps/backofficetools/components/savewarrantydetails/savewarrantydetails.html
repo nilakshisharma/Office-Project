@@ -1,0 +1,53 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+   <div class="save__container">
+    <div class="main">
+        <div class="main__head">
+            <h1>Warranty Details</h1>
+            <div class="line"></div>
+        </div>
+       <form class="main__form">
+         <div class="form__IDs">
+            <div class="form__IDs--model">
+                <input type="text" placeholder="ModelID" id="modelid">
+                <label for="modelid">MODEL ID*</label>
+                <span class="error"></span>
+            </div>
+            <div class="form__IDs--product">
+                <input type="text" placeholder="ProductID" id="productid">
+                <label for="productid">PRODUCT ID*</label>
+                <span class="error"></span>
+            </div>
+         </div>
+
+         <div class="form__dates">
+            <div class="form__dates-start">
+                <input type="date" id="startdate" min="2000-01-01" max="2100-12-31">
+                <label for="startdate">Start Date*</label>
+                <span class="error"></span>
+            </div>
+            <div class="form__dates-end">
+                <input type="date" id="enddate" min="2000-01-01" max="2100-12-31">
+                <label for="enddate">End Date*</label>
+                <span class="error"></span>
+            </div>
+         </div>
+        
+
+         <div class="form__dealerId">
+            <input type="text" placeholder="Dealer ID" id="dealerid">
+            <label for="dealerid">DEALER ID*</label>
+            <span class="error"></span>
+         </div>
+        
+
+         <button id="submit"> SUBMIT </button>
+    </form>
+
+    </div>
+   </div>
+
+   <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='backofficetools.site'}">
+  </sly>

@@ -1,0 +1,5 @@
+{
+  "user.mapping": [
+    "backofficetools.core:backoffice-service-user=backoffice-service-user"
+  ]
+}

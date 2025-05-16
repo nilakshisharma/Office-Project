@@ -1,0 +1,6 @@
+{
+  "scripts": [
+    "create service user backoffice-service-user",
+    "set  ACL on /var\n  allow jcr:read for backoffice-service-user\n  allow rep:write for backoffice-service-user\nend"
+  ]
+}

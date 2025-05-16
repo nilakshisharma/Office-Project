@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/backofficetools" mode="merge"/>
+    <filter root="/content/backofficetools" mode="merge"/>
+    <filter root="/content/dam/backofficetools" mode="merge">
+        <exclude pattern="/content/dam/backofficetools(/.*)?"/>
+        <include pattern="/content/dam/backofficetools/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/backofficetools/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/backofficetools" mode="merge"/>
+</workspaceFilter>

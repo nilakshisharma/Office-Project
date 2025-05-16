@@ -1,0 +1,5 @@
+#File edited by the Apache Sling Content Package to Sling Feature converter
+#Sun May 11 19:38:35 IST 2025
+author=backofficetools.all-author.json
+publish=backofficetools.all-publish.json
+(default)=backofficetools.all.json

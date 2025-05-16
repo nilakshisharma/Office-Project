@@ -1,0 +1,8 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/backofficetools",
+        "create path (nt:unstructured) /content/dam/backofficetools/jcr:content",
+        "set properties on /content/dam/backofficetools/jcr:content\n  set cq:conf{String} to /conf/backofficetools\n  set jcr:title{String} to \"Back Office Tools\"\nend"
+
+    ]
+}

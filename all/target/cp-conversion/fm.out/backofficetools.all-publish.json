@@ -1,0 +1,20 @@
+{
+  "id":"com.assignment:backofficetools.all:slingosgifeature:publish:1.0.0-SNAPSHOT",
+  "configurations":  {
+    "org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl":    {
+      "resource.resolver.mapping":[
+        "/content/backofficetools/</",
+        "/:/"
+      ],
+      ":configurator:content-package-origins":"com.assignment:backofficetools.all:1.0.0-SNAPSHOT|com.assignment:backofficetools.ui.config:1.0.0-SNAPSHOT"
+    }
+  },
+  "api-regions:JSON|false":[
+    {
+      "name":"global"
+    },
+    {
+      "name":"com.adobe.aem.deprecated"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.3.6
+Build-Jdk-Spec: 11
+Implementation-Title: Back Office Tools - UI apps
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.assignment:backofficetools.ui.apps:1.0.0-SNAPSHO
+ T
+Content-Package-Description: UI apps package for Back Office Tools
+Content-Package-Roots: /apps/backofficetools/clientlibs,/apps/backoffice
+ tools/components,/apps/backofficetools/content,/apps/backofficetools/i1
+ 8n,/apps/cq/core/content
+

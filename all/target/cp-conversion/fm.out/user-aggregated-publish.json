@@ -1,0 +1,136 @@
+{
+  "id":"com.assignment:backofficetools.all:slingosgifeature:user-aggregated-publish:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.assignment:backofficetools.core:1.0.0-SNAPSHOT",
+      "feature-origins":"com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT",
+      "Bundle-SymbolicName":"backofficetools.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.assignment:backofficetools.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "com.adobe.cq.wcm.core.components.internal.servlets.TableOfContentsFilter~backofficetools":    {
+      ":configurator:content-package-origins":"com.assignment:backofficetools.all:1.0.0-SNAPSHOT|com.assignment:backofficetools.ui.config:1.0.0-SNAPSHOT",
+      "enabled":"true",
+      ":configurator:feature-origins-enabled":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.commons.log.LogManager.factory.config~backofficetools":    {
+      ":configurator:content-package-origins":"com.assignment:backofficetools.all:1.0.0-SNAPSHOT|com.assignment:backofficetools.ui.config:1.0.0-SNAPSHOT",
+      "org.apache.sling.commons.log.names":[
+        "com.assignment"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:feature-origins-org.apache.sling.commons.log.names":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.file":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.level":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.additiv":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~backofficetools":    {
+      ":configurator:content-package-origins":"com.assignment:backofficetools.all:1.0.0-SNAPSHOT|com.assignment:backofficetools.ui.config:1.0.0-SNAPSHOT",
+      "user.mapping":[
+        "backofficetools.core:backoffice-service-user=backoffice-service-user"
+      ],
+      ":configurator:feature-origins-user.mapping":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl":    {
+      ":configurator:content-package-origins":"com.assignment:backofficetools.all:1.0.0-SNAPSHOT|com.assignment:backofficetools.ui.config:1.0.0-SNAPSHOT",
+      "resource.resolver.mapping":[
+        "/content/backofficetools/</",
+        "/:/"
+      ],
+      ":configurator:feature-origins-resource.resolver.mapping":[
+        "com.assignment:backofficetools.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.assignment:backofficetools.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+      ]
+    }
+  },
+  "assembled-features:ARTIFACTS|TRANSIENT":[
+    "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT",
+    "com.assignment:backofficetools.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.assignment:backofficetools.all:1.0.0-SNAPSHOT|com.assignment:backofficetools.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~backofficetools\r",
+    "create path (sling:OrderedFolder) /content/dam/backofficetools\r",
+    "create path (nt:unstructured) /content/dam/backofficetools/jcr:content\r",
+    "set properties on /content/dam/backofficetools/jcr:content",
+    "  set cq:conf{String} to /conf/backofficetools",
+    "  set jcr:title{String} to \"Back Office Tools\"",
+    "end\r",
+    "# origin=com.assignment:backofficetools.all:1.0.0-SNAPSHOT|com.assignment:backofficetools.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~backofficetoolsserviceuser\r",
+    "create service user backoffice-service-user\r",
+    "set  ACL on /var",
+    "  allow jcr:read for backoffice-service-user",
+    "  allow rep:write for backoffice-service-user",
+    "end"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    {
+      "id":"com.assignment:backofficetools.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.assignment:backofficetools.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.assignment:backofficetools.all:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT"
+    }
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.assignment.core.config",
+        "com.assignment.core.filters",
+        "com.assignment.core.listeners",
+        "com.assignment.core.models",
+        "com.assignment.core.schedulers",
+        "com.assignment.core.services",
+        "com.assignment.core.services.impl",
+        "com.assignment.core.servlets"
+      ],
+      "feature-origins":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT",
+        "com.assignment:backofficetools.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+      ]
+    },
+    {
+      "name":"com.adobe.aem.deprecated",
+      "feature-origins":[
+        "com.assignment:backofficetools.all:slingosgifeature:1.0.0-SNAPSHOT",
+        "com.assignment:backofficetools.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+      ]
+    }
+  ],
+  "artifact-rules:JSON|false":{
+    "mode":"LENIENT"
+  }
+}
